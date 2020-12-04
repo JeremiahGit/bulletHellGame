@@ -15,23 +15,29 @@ public class EnemyBullet1 : MonoBehaviour
     private float startingYPos;
     private float startingXPos;
     public float bulletSpeed = 4f;
-    private byte bulletType;
+    private int bulletType;
 
     public GameObject Player;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(-bulletSpeed*Mathf.Sin(Mathf.Abs(rb.transform.rotation.eulerAngles.z * Mathf.Deg2Rad)), bulletSpeed * Mathf.Cos(Mathf.Abs(rb.transform.rotation.eulerAngles.z * Mathf.Deg2Rad)));
+
+        // Update is called once per frame  
+        //rb.velocity = new Vector2(bulletSpeed* Mathf.Cos(Mathf.Abs(rb.transform.rotation.eulerAngles.z* Mathf.Deg2Rad)), -bulletSpeed* Mathf.Cos(Mathf.Sin(rb.transform.rotation.eulerAngles.z* Mathf.Deg2Rad)));
+
     }
 
-    // Update is called once per frame
+    // Update is called once per frame  
     void Update()
     {
-        
+        //rb.velocity = transform.forward * bulletSpeed;
+        //transform.Translate(Vector3.forward * Time.deltaTime);
     }
 
-    //This will be called right after the initalization of the object
-    public void Initialise(byte _bulletType, float Xpos, float YPos)
+    /*This will be called right after the initalization of the object
+    public void Initialise(int _bulletType, float Xpos, float YPos)
     {
         bulletType = _bulletType;
         rb.position = new Vector3(Xpos, YPos);
@@ -42,7 +48,7 @@ public class EnemyBullet1 : MonoBehaviour
                 setBulletType1();
                 break;
             case 2:
-                Debug.Log('2');
+                setBulletType2();
                 break;
             case 3:
                 Debug.Log('3');
@@ -58,6 +64,7 @@ public class EnemyBullet1 : MonoBehaviour
     {
         rb.velocity = new Vector2(0, -bulletSpeed);
     }
+    */
 
     //This will make the the bullet face in a downwards range and move in that path
     public void setBulletType2()
@@ -72,6 +79,10 @@ public class EnemyBullet1 : MonoBehaviour
             Destroy(gameObject);
         }
         else if (other.gameObject.CompareTag("Border"))
+        {
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.CompareTag("TopBorder"))
         {
             Destroy(gameObject);
         }

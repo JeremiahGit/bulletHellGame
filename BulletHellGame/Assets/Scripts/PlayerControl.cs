@@ -9,7 +9,6 @@ public class PlayerControl : MonoBehaviour
     public int speed = 7;
     public float slowSpeedModifier = .5f;
     private float slowSpeedMod = 1f;
-    public bool isPlayerOne = false;
     private Rigidbody2D rb;
     private float xinput = 0f;
     private float yinput = 0f;
@@ -40,18 +39,9 @@ public class PlayerControl : MonoBehaviour
         }
 
         //Movement and Player Input
-        if (isPlayerOne)
-        {
-            xinput = Input.GetAxis("Horizontal");
-            yinput = Input.GetAxis("Vertical");
-            rb.velocity = new Vector2(xinput * speed * slowSpeedMod, yinput * speed * slowSpeedMod);
-        }
-        else
-        {
-            xinput = Input.GetAxis("Horizontal2");
-            yinput = Input.GetAxis("Vertical2");
-            rb.velocity = new Vector2(xinput * speed * slowSpeedMod, yinput * speed * slowSpeedMod);
-        }
+        xinput = Input.GetAxis("Horizontal");
+        yinput = Input.GetAxis("Vertical");
+        rb.velocity = new Vector2(xinput * speed * slowSpeedMod, yinput * speed * slowSpeedMod);
 
         if (Input.GetKeyDown("space"))
         {

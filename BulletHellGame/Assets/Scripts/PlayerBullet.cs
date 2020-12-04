@@ -14,8 +14,8 @@ public class PlayerBullet : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        playerXPos = GameObject.Find("Player1").GetComponent<Rigidbody2D>().position.x;
-        playerYPos = GameObject.Find("Player1").GetComponent<Rigidbody2D>().position.y;
+        playerXPos = GameObject.Find("Player").GetComponent<Rigidbody2D>().position.x;
+        playerYPos = GameObject.Find("Player").GetComponent<Rigidbody2D>().position.y;
         rb.position = new Vector3(playerXPos, playerYPos+.5f);
         rb.velocity = new Vector2(0, bulletSpeed);
     }
