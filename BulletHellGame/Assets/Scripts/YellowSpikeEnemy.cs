@@ -31,10 +31,10 @@ public class YellowSpikeEnemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (other.gameObject.CompareTag("Border"))
-        {
-            Destroy(gameObject);
-        }
+        //else if (other.gameObject.CompareTag("Border"))
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     IEnumerator MoveAndStop()
@@ -58,6 +58,5 @@ public class YellowSpikeEnemy : MonoBehaviour
             }
             yield return new WaitForSeconds(yellowFireRate);
         }
-
     }
 }
