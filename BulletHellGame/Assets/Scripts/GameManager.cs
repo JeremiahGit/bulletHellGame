@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(enemySpawnRate);
+            yield return new WaitForSeconds(Random.Range(.5f,enemySpawnRate));
             int index = Random.Range(0, enemyList.Count);
             Instantiate(enemyList[index]);
         }

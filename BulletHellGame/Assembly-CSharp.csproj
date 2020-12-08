@@ -63,18 +63,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Barrier.cs" />
-    <Compile Include="Assets\Scripts\Enemy1.cs" />
-    <Compile Include="Assets\Scripts\EnemyBullet1.cs" />
+    <Compile Include="Assets\Scripts\Bullet Types\Barrier.cs" />
+    <Compile Include="Assets\Scripts\Bullet Types\EnemyBullet1.cs" />
+    <Compile Include="Assets\Scripts\Bullet Types\PlayerBullet.cs" />
+    <Compile Include="Assets\Scripts\Bullet Types\WeLOVEToRotate.cs" />
+    <Compile Include="Assets\Scripts\Enemy Types\Enemy1.cs" />
+    <Compile Include="Assets\Scripts\Enemy Types\PinkMansEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy Types\Target.cs" />
+    <Compile Include="Assets\Scripts\Enemy Types\YellowSpikeEnemy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\PinkMansEnemy.cs" />
-    <Compile Include="Assets\Scripts\PlayerBullet.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
-    <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Test2.cs" />
-    <Compile Include="Assets\Scripts\WeLOVEToRotate.cs" />
-    <Compile Include="Assets\Scripts\YellowSpikeEnemy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
