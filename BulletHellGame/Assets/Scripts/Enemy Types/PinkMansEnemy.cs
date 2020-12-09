@@ -27,8 +27,8 @@ public class PinkMansEnemy : MonoBehaviour
         
     }
 
-    // I wanted it to give the effect of comming out of warp drive
-    //
+    /* I wanted it to give the effect of comming out of warp drive
+    */
     IEnumerator Exist()
     {
         yield return new WaitForSeconds(Random.Range(.2f, .3f));

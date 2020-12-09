@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Bullet Types\EnemyBullet1.cs" />
     <Compile Include="Assets\Scripts\Bullet Types\PlayerBullet.cs" />
     <Compile Include="Assets\Scripts\Bullet Types\WeLOVEToRotate.cs" />
+    <Compile Include="Assets\Scripts\Enemy Types\BossEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy Types\Enemy1.cs" />
     <Compile Include="Assets\Scripts\Enemy Types\PinkMansEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy Types\Target.cs" />
