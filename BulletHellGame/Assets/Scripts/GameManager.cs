@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private int score;
 
     public List<GameObject> enemyList;
+    public GameObject bossEnemyDude;
     private float enemySpawnRate = 2f;
 
     // Start is called before the first frame update
@@ -21,7 +22,8 @@ public class GameManager : MonoBehaviour
         UpdateScore(0);
         StartCoroutine("SpwanEnemies");
         StartCoroutine("SlowScoreIncrease");
-        
+        StartCoroutine("SpawnBoss");
+
     }
 
     // Update is called once per frame
@@ -52,6 +54,17 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(.5f,enemySpawnRate));
             int index = Random.Range(0, enemyList.Count);
             Instantiate(enemyList[index]);
+        }
+    }
+
+    IEnumerator SpawnBoss()
+    {
+        yield return new WaitForSeconds(15f);
+        while (true)
+        {
+            Instantiate(bossEnemyDude);
+            yield return new WaitForSeconds(30f);
+
         }
     }
 }

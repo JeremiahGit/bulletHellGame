@@ -34,11 +34,11 @@ public class BossEnemy : MonoBehaviour
     {
         while (true)
         {
-            bossRB.velocity = new Vector2(3, 0);
+            bossRB.velocity = new Vector2(3, bossRB.velocity.y);
             yield return new WaitForSeconds(7f);
             bossRB.transform.localScale = new Vector3(-1.5f, 1.5f, 1f);
 
-            bossRB.velocity = new Vector2(-3, 0);
+            bossRB.velocity = new Vector2(-3, bossRB.velocity.y);
             yield return new WaitForSeconds(7f);
             bossRB.transform.localScale = new Vector3(1.5f, 1.5f, 1f);
         }
@@ -48,12 +48,11 @@ public class BossEnemy : MonoBehaviour
     {
         while (true)
         {
-            bossRB.velocity = new Vector2(0, 3);
-            yield return new WaitForSeconds(Random.Range(2f,3f));
+            bossRB.velocity = new Vector2(bossRB.velocity.x, 1);
+            yield return new WaitForSeconds(.7f);
 
-            bossRB.velocity = new Vector2(0, -3);
-            yield return new WaitForSeconds(7f);
-            yield return new WaitForSeconds(Random.Range(2f, 3f));
+            bossRB.velocity = new Vector2(bossRB.velocity.x, -1);
+            yield return new WaitForSeconds(.7f);
         }
     }
 
